@@ -1,34 +1,18 @@
-# 🦀🕸 `rust-webpack-template`
+# wasm-chip8
 
-> **Kickstart your Rust, WebAssembly, and Webpack project!**
+> **Rust, WebAssembly and Web Components!**
 
-This template is designed for creating monorepo-style Web applications with
-Rust-generated WebAssembly and Webpack without publishing your wasm to NPM.
+Simple CHIP8 emulator written using Rust, WebAssembly and Web Components to
+learn more about these technologies and emulation.
 
-[**📚 Read this template tutorial! 📚**][template-docs]
+## Available scripts
 
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
+> NPM scripts that can be used in the project.
 
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/index.html
+```bash
+# Bundle the project (in production mode).
+$ npm run build
 
-## 🚴 Using This Template
-
-You can use `npm init` to clone this template:
-
-```sh
-npm init rust-webpack my-app
+# Serve the project locally for development at 'http://localhost:8080'.
+$ npm run start
 ```
-
-[Afterwards check out the full documentation for exploring it][template-docs].
-
-## 🔋 Batteries Included
-
-This template comes pre-configured with all the boilerplate for compiling Rust
-to WebAssembly and hooking into a Webpack build pipeline.
-
-* `npm run start` -- Serve the project locally for development at
-  `http://localhost:8080`.
-
-* `npm run build` -- Bundle the project (in production mode).
