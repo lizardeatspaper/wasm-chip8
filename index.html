@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>WASM-CHIP8</title>
+        <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        header p {
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        footer {
+            padding: 10px;
+            border-top: 1px solid #DCDFE6;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Simple CHIP8 emulator</h1>
+            <p>Written using WebAssembly and Web Components.</p>
+        </header>
+        <chip8-emulator started="false" ticks-per-frame="10"></chip8-emulator>
+        <footer>
+            <small>2019 &copy; Vladislav Bulyukhin</small>
+        </footer>
+    </body>
+</html>
+

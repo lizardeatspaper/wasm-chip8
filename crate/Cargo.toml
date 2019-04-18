@@ -1,0 +1,44 @@
+[package]
+name = "wasm-chip8"
+version = "0.1.0"
+categories = ["wasm"]
+description = "CHIP8 emulator written using Rust, WebAssembly, and Webpack!"
+authors = ["Vladislav Bulyukhin <vlad.bulyukhin@yahoo.com>"]
+license = "Apache-2.0/MIT"
+readme = "./README.md"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.25"
+rand = { version = "0.6", features = ["wasm-bindgen"] }
+
+# The `console_error_panic_hook` crate provides better debugging of panics by
+# logging them with `console.error`. This is great for development, but requires
+# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
+# code size when deploying.
+console_error_panic_hook = { version = "0.1.5", optional = true }
+
+# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
+# compared to the default allocator's ~10K. It is slower than the default
+# allocator, however.
+wee_alloc = { version = "0.4.2", optional = true }
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+  "Document",
+  "Element",
+  "HtmlElement",
+  "Node",
+  "Window",
+]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
